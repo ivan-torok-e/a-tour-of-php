@@ -16,6 +16,12 @@ function runAllTest() {
 }
 
 function runTestFor() {
+
+  if ! echo "$1" | grep -q ".php$"; then
+    echo "given file is not a php script"
+    exit 1
+  fi
+
   exerciseFilePath="$1"
   testFilePath=$(echo $exerciseFilePath | sed s/exercises/tests/)
 
@@ -30,6 +36,7 @@ function runTestFor() {
     echo "missing test file:"
     echo "  $testFilePath"
   fi
+
 }
 
 if [ "$1" == "" ]
