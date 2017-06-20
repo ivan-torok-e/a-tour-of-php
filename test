@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+function testRunnerPath() {
+  case $(php --version | grep "PHP [[:digit:]]" | awk -F' ' '{split($2,x,"."); print(x[1]"."x[2])}') in
+    "5.3") echo "./vendor/phpunit-4.8.35.phar" ;;
+    "5.6") echo "./vendor/phpunit-5.7.20.phar" ;;
+    "7.0") echo "./vendor/phpunit-6.2.2.phar" ;;
+    "7.1") echo "./vendor/phpunit-6.2.2.phar" ;;
+  esac
+}
+
+function runAllTest() {
+    for exerciseFilePath in $(find ./exercises -name '*.php'); do
+      runTestFor $exerciseFilePath
+    done
+}
+
+function runTestFor() {
+  exerciseFilePath="$1"
+  testFilePath=$(echo $exerciseFilePath | sed s/exercises/tests/)
+
+  if [ -f "$testFilePath" ]
+  then
+    testingCommand="php `testRunnerPath` --bootstrap $exerciseFilePath $testFilePath"
+    echo "to run this test by hand, execute the following command:"
+    echo $testingCommand
+    echo
+    eval $testingCommand
+  else
+    echo "missing test file:"
+    echo "  $testFilePath"
+  fi
+}
+
+if [ "$1" == "" ]
+then
+  runAllTest
+else
+  runTestFor "$1"
+fi
