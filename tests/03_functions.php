@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-final class FunctionsTest extends TestCase {
+class FunctionsTest extends TestCase {
 
     public function testCreateAFunctionThatReturnsTheNumber42() {
         $pwf = new PlayingWithFunctions();
