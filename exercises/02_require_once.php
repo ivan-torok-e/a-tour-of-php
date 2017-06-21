@@ -10,3 +10,5 @@
 // If an error occurs, the include() function generates a warning,
 // but the script will continue execution.
 // The require() generates a fatal error, and the script will stop.
+
+require_once(dirname(__FILE__) . "/02_require_once/example.php");
