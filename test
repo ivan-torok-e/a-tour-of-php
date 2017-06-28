@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 function testRunnerPath() {
   case $(php --version | grep "PHP [[:digit:]]" | awk -F' ' '{split($2,x,"."); print(x[1]"."x[2])}') in
