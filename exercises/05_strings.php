@@ -12,7 +12,7 @@ class Strings {
     //   example: "dog" . " " . "cat" == "dog cat"
     //
     public function concatWordTextTo($text) {
-
+            return $text . " world";
     }
 
     // You can create interpolated string with using the "." expression like hell,
@@ -21,7 +21,7 @@ class Strings {
     // $word = "barking"
     // "dog {$word}!" == "dog barking!"
     public function interpolateStringWith($textToBeInserted) {
-
+        return "Hello, {$textToBeInserted}!";
     }
 
 }

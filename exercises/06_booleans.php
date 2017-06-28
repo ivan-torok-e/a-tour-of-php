@@ -25,25 +25,25 @@ class BooleanTypesAndComparison {
 
     // two primitive given, check that the left side is bigger than the right
     public function isLeftBiggerThanRight($left, $right) {
-
+        return $left > $right;
     }
 
     // two primitive given, check that the left side is equal to the right side
     public function isLeftEqualToRight($left, $right) {
-
+        return $left == $right;
     }
 
     // two primitive given, check that the left side is equal to the right side
     public function isLeftEqualToRightInStrictComparison($left, $right) {
-
+        return $left === $right;
     }
 
     public function isFirstLesserThanSecondAndSecondBiggerThanThird($f, $s, $t) {
-
+        return $f < $s && $s > $t;
     }
 
     public function isFirstLesserThanSecondOrSecondBiggerThanThird($f, $s, $t) {
-
+        return $f < $s || $s > $t;
     }
 
 }

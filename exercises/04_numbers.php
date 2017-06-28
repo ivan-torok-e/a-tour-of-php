@@ -20,11 +20,11 @@ class Numbers {
 
 
     public function incrementByTwo($number) {
-
+        return $number + 2;
     }
 
     public function dividedBySix($number) {
-
+        return $number / 6;
     }
 
 

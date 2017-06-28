@@ -6,7 +6,7 @@ class HelloWorld {
     //  example:
     //      echo "sup!";
     public function say() {
-
+        echo "Hello, world!";
     }
 
 }
