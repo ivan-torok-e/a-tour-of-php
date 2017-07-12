@@ -4,7 +4,8 @@ class Strings {
 
     // ### Strings are a textual primitive
     //
-    // The basic syntax for writing string is free texts enclosed by " or ' character
+    // A string is a sequence of characters, like "Hello world!".
+    // A string can be any text inside quotes. You can use single or double quotes
     // ---------------------------------------------------------------------
 
 

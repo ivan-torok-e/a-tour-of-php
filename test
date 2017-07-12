@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function showHelpMessage() {
+  echo "Usage: $0 [exerciseFile]"
+  echo "to run all test, simply not provide anything as parameter"
+}
+
 function testRunnerPath() {
   case $(php --version | grep "PHP [[:digit:]]" | awk -F' ' '{split($2,x,"."); print(x[1]"."x[2])}') in
     "5.3") echo "./vendor/phpunit-4.8.35.phar" ;;
@@ -18,7 +23,7 @@ function runAllTest() {
 function runTestFor() {
 
   if ! echo "$1" | grep -q ".php$"; then
-    echo "given file is not a php script"
+    showHelpMessage
     exit 1
   fi
 
