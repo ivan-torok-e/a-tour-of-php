@@ -12,6 +12,10 @@
 //    * NULL
 //
 // ---
+// Classes are the blueprints for your idea that you want to model.
+// One of the big differences between functions and classes is that a class contains
+// both data (variables) and functions that form a package called an: ‘object’.
+//
 //
 // Your task here is to
 //    * create a new class by your self alone
