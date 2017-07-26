@@ -25,3 +25,10 @@
 //    * it will return the received value's type as a string
 //      * you must use the use the internet for this in order to find out how to get a values type
 //
+
+
+class TypesAndClasses {
+    public function checkTypeOf($valueToBeCheckedForType){
+        return gettype($valueToBeCheckedForType);
+    }
+}
