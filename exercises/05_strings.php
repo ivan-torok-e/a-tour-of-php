@@ -4,7 +4,8 @@ class Strings {
 
     // ### Strings are a textual primitive
     //
-    // The basic syntax for writing string is free texts enclosed by " or ' character
+    // A string is a sequence of characters, like "Hello world!".
+    // A string can be any text inside quotes. You can use single or double quotes
     // ---------------------------------------------------------------------
 
 
@@ -12,7 +13,11 @@ class Strings {
     //   example: "dog" . " " . "cat" == "dog cat"
     //
     public function concatWordTextTo($text) {
+<<<<<<< HEAD
         return $text . " world";
+=======
+            return $text . " world";
+>>>>>>> 1134542fb76f934aa5c87dcf3fccdb7cd3d1549d
     }
 
     // You can create interpolated string with using the "." expression like hell,
@@ -21,12 +26,16 @@ class Strings {
     // $word = "barking"
     // "dog {$word}!" == "dog barking!"
     public function interpolateStringWith($textToBeInserted) {
+<<<<<<< HEAD
         if ($textToBeInserted){
             return "Hello, {$textToBeInserted}!";
         } else {
             return "Hello, world!";
         }
         
+=======
+        return "Hello, {$textToBeInserted}!";
+>>>>>>> 1134542fb76f934aa5c87dcf3fccdb7cd3d1549d
     }
 
 }
